@@ -1,0 +1,14 @@
+import java.util.*;
+
+class printNumber {
+    public static void main(String args[]) {
+        int counter = 1;
+        int fact = 1;
+        for (counter = 1; counter <= 5; counter++) {
+            fact = fact * (counter);
+        }
+        System.out.println(fact);
+        return;
+    }
+}
+OUTPUT: 120
