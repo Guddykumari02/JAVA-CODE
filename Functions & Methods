@@ -1,0 +1,69 @@
+Qus1:- Make a Function to add 2 numbers and return the sum.
+
+Code:
+import java.util.*;
+
+public class Function {
+    public static int calculateSum(int a, int b) {
+        int sum = a + b;
+        return sum;
+    }
+
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int sum = calculateSum(a, b);
+        System.out.println(sum);
+    }
+}
+//Output a= 3, b = 4 , sum = 7
+
+
+Qus2:- Make a Function to multiply 2 nummbers and return the product.
+
+Code:-
+import java.util.*;
+
+public class Function {
+    public static int calculateMultiply(int a, int b) {
+        int product = a * b;
+        return product;
+    }
+
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int product = calculateMultiply(a, b);
+        System.out.println(product);
+    }
+}
+//Output a= 4, b = 5, product = 20
+
+Qus3: Find the factorial of a Number.
+
+Code:
+import java.util.*;
+
+public class Solution {    
+    public static int printFactorial(int n) {
+        if(n < 0){
+        System.out.println("Invalid Number");
+        return;
+        }
+        int factorial = 1;
+        for(int i = n; i >= 1; i--){
+        factorial = factorial*i;
+        System.out.println(factorial);
+        return;
+        }
+        System.out.println(factorial);
+        return;
+    }
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        printFactorial(n);
+    }
+}
