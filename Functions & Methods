@@ -55,8 +55,6 @@ public class Solution {
         int factorial = 1;
         for(int i = n; i >= 1; i--){
         factorial = factorial*i;
-        System.out.println(factorial);
-        return;
         }
         System.out.println(factorial);
         return;
