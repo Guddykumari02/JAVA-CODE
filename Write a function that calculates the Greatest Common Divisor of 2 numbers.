@@ -1,0 +1,22 @@
+import java.util.*;
+
+public class GCD {
+    public static int calculateGCD(int a, int b) {
+        if (a == 0)
+            return a;
+        if (b == 0)
+            return b;
+        if (a == b)
+            return a;
+        if (a > b)
+            return calculateGCD(a - b, b);
+        return calculateGCD(b, b - a);
+    }
+
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        System.out.println("" + calculateGCD(a, b));
+    }
+}
