@@ -1,0 +1,15 @@
+import java.util.*;
+
+public class Name {
+    public static void main(String args[]) {
+        int i = 1;
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        String name = sc.next();
+        while (i <= n) {
+            System.out.println(name);
+            i++;
+        }
+
+    }
+}
