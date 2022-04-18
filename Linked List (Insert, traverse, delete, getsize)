@@ -1,0 +1,112 @@
+import java.util.LinkedList;
+import java.util.Scanner;
+
+class LLists {
+    Node head;
+    private int size;
+
+    LLists() {
+        this.size = 0;
+    }
+
+    class Node {
+        int data;
+        Node next;
+
+        Node(int data) {
+            this.data = data;
+            this.next = null;
+            size++;
+        }
+    }
+
+    public void addFirst(int data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = newNode;
+            return;
+        }
+        newNode.next = head;
+        head = newNode;
+    }
+
+    public void addLast(int data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = newNode;
+            return;
+        }
+        // traverse
+        Node currNode = head;
+        while (currNode.next != null) {
+            currNode = currNode.next;
+        }
+        currNode.next = newNode;
+    }
+
+    // print list
+    public void printList() {
+        if (head == null) {
+            System.out.println("list is empty");
+            return;
+        }
+        Node currNode = head;
+        while (currNode != null) {
+            System.out.print(currNode.data + " -> ");
+            currNode = currNode.next;
+        }
+        System.out.println("NULL");
+    }
+
+    // Delete first
+    public void deleteFirst() {
+        if (head == null) {
+            System.out.println("The list is empty");
+            return;
+        }
+        size--;
+        head = head.next;
+    }
+
+    // delete last
+    public void deleteLast() {
+        if (head == null) {
+            System.out.println("The list is empty");
+            return;
+        }
+        if (head.next == null) {
+            head = null;
+            return;
+        }
+        Node secondLast = head;
+        Node lastNode = head.next;
+        while (lastNode.next != null) {
+            lastNode = lastNode.next;
+            secondLast = secondLast.next;
+        }
+        size--;
+        secondLast.next = null;
+
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public static void main(String args[]) {
+        LLists list = new LLists();
+        list.addFirst(1);
+        list.addFirst(2);
+        list.printList();
+        list.addFirst(3);
+        list.printList();
+        list.addFirst(4);
+        list.printList();
+        list.deleteFirst();
+        list.printList();
+        list.deleteLast();
+        list.printList();
+        System.out.println(list.getSize());
+
+    }
+}
