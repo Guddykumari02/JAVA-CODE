@@ -1,0 +1,21 @@
+import java.util.*;
+
+class dectoBinary {
+    static int DecBinary(int n) {
+        int rem, rev = 0;
+        while (n > 0) {
+            rem = n % 2;
+            rev = rev * 10 + rem;
+            n = n / 2;
+        }
+        return rev;
+
+    }
+
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter any Number:");
+        int n = sc.nextInt();
+        System.out.println("Decimat to Binary is" + (DecBinary(n)));
+    }
+}
